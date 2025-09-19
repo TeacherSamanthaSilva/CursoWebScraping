@@ -13,7 +13,7 @@ from pytimedinput import timedInput
 class AsimovNews:
     def __init__(self):
         self.dict_site = {}
-        self.all_sites = ['olhar digital', 'canal tech', 'tecmundo', 'tudo celular']
+        self.all_sites = ['veja', 'r7', 'cnn', 'globo']
 
         self.screen = 0
         self.kill = False
