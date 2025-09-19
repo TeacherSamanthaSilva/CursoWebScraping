@@ -6,8 +6,8 @@ class Site:
         self.opcao = opcao
 
     def update_news(self):
-        if self.opcao.lower() == 'globo':
-            url = 'https://www.globo.com/'
+        if self.opcao.lower() == 'olhar digital':
+            url = 'https://olhardigital.com.br'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \(KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url, headers = browsers)
 
@@ -28,8 +28,8 @@ class Site:
                         news_dict_globo[noticia.h2.text] = noticia.get('href')
             self.news = news_dict_globo
 
-        if self.opcao.lower() == 'veja':
-            url = 'https://veja.abril.com.br/'
+        if self.opcao.lower() == 'canal tech':
+            url = 'https://canaltech.com.br'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \(KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url, headers = browsers)
 
@@ -53,8 +53,8 @@ class Site:
                     news_dict_veja[noticia.h4.text] = noticia.get('href')
             self.news =  news_dict_veja
 
-        if self.opcao.lower() == 'r7':
-            url = 'https://www.r7.com/'
+        if self.opcao.lower() == 'tecmundo':
+            url = 'https://www.tecmundo.com.br'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \(KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url, headers = browsers)
 
@@ -79,8 +79,8 @@ class Site:
 
             self.news = news_dict_r7
 
-        if self.opcao.lower() == 'cnn':
-            url = 'https://www.cnnbrasil.com.br/'
+        if self.opcao.lower() == 'tudo celular':
+            url = 'https://www.tudocelular.com'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \(KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url, headers = browsers)
 
